@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Isaka James | Portfolio</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1e1e1e;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        header {
+            padding: 50px 0;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 3rem;
+        }
+        header p {
+            margin-top: 10px;
+            font-size: 1.2rem;
+        }
+        .content {
+            padding: 40px;
+        }
+        .content p {
+            font-size: 1.1rem;
+            margin: 20px 0;
+        }
+        .content a {
+            color: #4CAF50;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        footer {
+            padding: 20px;
+            font-size: 0.8rem;
+        }
+        .btn {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white !important;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+
+        /* Responsive Styles */
+        @media screen and (max-width: 768px) {
+            header h1 {
+                font-size: 2.5rem;
+            }
+            header p {
+                font-size: 1rem;
+            }
+            .content p {
+                font-size: 1rem;
+            }
+        }
+        @media screen and (max-width: 480px) {
+            header h1 {
+                font-size: 2rem;
+            }
+            header p {
+                font-size: 0.9rem;
+            }
+            .content {
+                padding: 20px;
+            }
+            .content p {
+                font-size: 0.9rem;
+            }
+            .btn {
+                padding: 8px 16px;
+                font-size: 0.9rem;
+				
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Isaka James</h1>
+        <p>Web Developer | App Developer | Cybersecurity | Designer</p>
+    </header>
+    <div class="content">
+        <p>Welcome, I specialize in</p>
+        <p><strong>Web Development, App Development, Low-Level Development, Cybersecurity & Design.</strong></p>
+        <p>Explore my work on <a href="https://github.com/isaka-james" target="_blank">GitHub</a> or visit my <a href="https://isaka-james.vercel.app" target="_blank">Portfolio</a>.</p>
+        <!-- "Contact Me" link with hidden email -->
+        <a href="#" id="contact-link" class="btn">Contact Me</a>
+    </div>
+    <footer>
+        <p>&copy; 2024 Isaka James</p>
+    </footer>
+
+    <script>
+        // Script to protect the email address and set the "Contact Me" link dynamically
+        document.getElementById('contact-link').addEventListener('click', function(e) {
+            e.preventDefault();  // Prevent default action of the link
+            var email = 'isakajames' + '@' + 'jasitech.co.tz';  // Combine email parts
+            var subject = 'Contact from Portfolio';  // Optional subject for the email
+            var body = 'Hello, I would like to contact you.'; // Optional body text
+            window.location.href = 'mailto:' + email + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body); // Open email client
+        });
+    </script>
+</body>
+</html>
+

@@ -4,7 +4,7 @@ Welcome to my personal portfolio website.
 
 This portfolio showcases my skills and projects as a passionate software engineer, designer, and cybersecurity enthusiast. Explore my work and feel free to get in touch.
 
-Live Demo: [isaka-james's Portfolio](https://isaka-james.vercel.app)
+Live Demo: [Isaka James's Portfolio](https://isaka.vercel.app)
 
 ## Technologies Used
 - HTML

@@ -3,112 +3,227 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Isaka James | Portfolio</title>
+    <title>Isaka James - Letter Portfolio</title>
+
+    <!-- SEO Tags -->
+    <meta name="description" content="Portfolio of Isaka James, a passionate software engineer, designer, and cybersecurity enthusiast with expertise in React, Angular, Flutter, Laravel, Spring Boot, and more.">
+    <meta name="keywords" content="Isaka James, software engineer, designer, cybersecurity, React, Angular, Flutter, Laravel, Spring Boot, programming, technology, portfolio, Tanzania Programmer">
+    <meta name="author" content="Isaka James">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:title" content="Isaka James - Portfolio">
+    <meta property="og:description" content="Explore the portfolio of Isaka James, a passionate software engineer with expertise in a wide range of technologies and a commitment to innovation.">
+    <meta property="og:image" content="https://isaka-james.vercel.app/assets/image-DBAcO8SQ.png">
+    <meta property="og:url" content="https://isaka-james.vercel.app">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter -->
+    <meta name="twitter:title" content="Isaka James - Portfolio">
+    <meta name="twitter:description" content="Discover the portfolio of Isaka James, a software engineer, designer, and cybersecurity enthusiast.">
+    <meta name="twitter:image" content="https://isaka-james.vercel.app/assets/image-DBAcO8SQ.png">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Additional Meta Tags -->
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
+    <link rel="canonical" href="https://isaka-james.vercel.app">
+
     <style>
-        /* General Styles */
         body {
-            font-family: Arial, sans-serif;
-            background-color: #1e1e1e;
-            color: #fff;
+            font-family: 'Georgia', serif, 'Dancing Script', cursive;
+            background-color: #f7f3e9;
+            color: #3a3a3a;
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
+            min-width: 300px;
+        }
+        .container {
+            margin: 0 auto;
+            max-width: 800px;
+            margin: 16px auto;
+            background: #fff;
+            border: 0.8px solid #b8a48a;
+            padding: 24.0px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            font-size: 0.88em;
+            line-height: 1.44;
+        }
+        .profile-pic {
             text-align: center;
+            margin-top: -90px;
+            margin-bottom: 20px;
+            position: relative; 
+            
         }
-        header {
-            padding: 50px 0;
+        .profile-pic img {
+            border-radius: 50%;
+            width: 180px;
+            height: 180px;
+            border: 4px solid #d8c9a3;
+            object-fit: cover;  
+            opacity: 0; 
+            transition: opacity 0.5s ease-in-out; 
         }
-        header h1 {
-            margin: 0;
-            font-size: 3rem;
+        .profile-pic img.loaded {
+            opacity: 1; 
         }
-        header p {
+        h1 {
+            text-align: center;
+            font-family: 'Dancing Script', cursive;
+            font-size: 2.7em;
+            color: #4a3f35;
             margin-top: 10px;
-            font-size: 1.2rem;
+            margin-bottom: 25px;
+            line-height: 1.4;
         }
-        .content {
-            padding: 40px;
+        p {
+            text-indent: 30px;
+            font-size: 1.2em;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            color: #5d4a3a;
         }
-        .content p {
-            font-size: 1.1rem;
-            margin: 20px 0;
+        .signature {
+            margin-top: 40px;
+            text-align: right;
+            font-family: 'Dancing Script', cursive;
+            font-size: 1.5em;
+            color: #4a3f35;
         }
-        .content a {
-            color: #4CAF50;
+        .contact {
+            text-align: center;
+            margin-top: 25px;
+        }
+        .contact a {
+            font-family: 'Dancing Script', cursive;
+            font-size: 1.3em;
+            color: #4a3f35;
             text-decoration: none;
             font-weight: bold;
         }
-        footer {
-            padding: 20px;
-            font-size: 0.8rem;
+        .contact a:hover {
+            text-decoration: underline;
         }
-        .btn {
-            padding: 10px 20px;
-            background-color: #4CAF50;
-            color: white !important;
-            text-decoration: none;
-            border-radius: 5px;
-            margin-top: 20px;
+        h2 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 2em;
+            text-align: center;
+            margin-top: 30px;
+            color: #3a2e1f;
+        }
+        .clickable{
+            cursor: pointer;
         }
 
-        /* Responsive Styles */
-        @media screen and (max-width: 768px) {
-            header h1 {
-                font-size: 2.5rem;
-            }
-            header p {
-                font-size: 1rem;
-            }
-            .content p {
-                font-size: 1rem;
-            }
+        ::selection {
+            background-color: #4a3f35;
+            color: #ffffff;
         }
-        @media screen and (max-width: 480px) {
-            header h1 {
-                font-size: 2rem;
-            }
-            header p {
-                font-size: 0.9rem;
-            }
-            .content {
+
+
+        
+
+        @media (max-width: 768px) {
+            .container {
+                margin: 20px;
                 padding: 20px;
             }
-            .content p {
-                font-size: 0.9rem;
+            .profile-pic {
+                margin-top: -40px;
             }
-            .btn {
-                padding: 8px 16px;
-                font-size: 0.9rem;
-				
+            .profile-pic img {
+                width: 150px;
+                height: 150px;
+            }
+            h1 {
+                font-size: 2.2em;
+            }
+            p {
+                font-size: 1.1em;
+            }
+            .signature {
+                font-size: 1.3em;
+            }
+            h2 {
+                font-size: 1.8em;
             }
         }
+        @media (min-width: 768px) {
+            .container {
+                margin: 100px;
+                padding: 40px;
+            }
+        }
+        @media (min-width: 300px) and (max-width:500px) {
+            h1 {
+                font-size: 2em;
+            }
+        }
+       
     </style>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&amp;display=swap" rel="stylesheet">
+    
 </head>
 <body>
-    <header>
-        <h1>Isaka James</h1>
-        <p>Web Developer | App Developer | Cybersecurity | Designer</p>
-    </header>
-    <div class="content">
-        <p>Welcome, I specialize in</p>
-        <p><strong>Web Development, App Development, Low-Level Development, Cybersecurity & Design.</strong></p>
-        <p>Explore my work on <a href="https://github.com/isaka-james" target="_blank">GitHub</a> or visit my <a href="https://isaka-james.vercel.app" target="_blank">Portfolio</a>.</p>
-        <!-- "Contact Me" link with hidden email -->
-        <a href="#" id="contact-link" class="btn">Contact Me</a>
-    </div>
-    <footer>
-        <p>&copy; 2024 Isaka James</p>
-    </footer>
+    <div class="container">
+        <div class="profile-pic">
+            <img src="https://isaka-james.vercel.app/assets/image-DBAcO8SQ.png" alt="Isaka James" onload="this.classList.add('loaded')" title="Isaka James' Photo">
+        </div>
+        <h1 id="resume"  class="clickable" title="Click to Open Isaka James' Resume">To Whom It May Concern,</h1>
+        <p>
+            I hope this message reaches you in the best of health and spirits. My name is Isaka James, and I am a passionate software engineer, designer, and cyber security enthusiast. My journey in the tech world began years ago, and since then, I have had the pleasure of contributing to various innovative projects, both locally and internationally.
+        </p>
+        <p>
+            With proficiency in over 20 programming languages, I have honed my skills in a multitude of technologies. These include expertise in front-end frameworks such as React, Angular, and Flutter, as well as back-end technologies like Laravel,Flask, Quart,NodeJS, Spring Boot, and Django. My experience extends beyond coding as I also take pride in designing intuitive user interfaces and crafting seamless user experiences. This, combined with my passion for cybersecurity, has allowed me to help create more secure and resilient digital systems.
 
+        </p>
+        <p>
+            I have always believed that technology should serve a higher purpose—one that not only solves problems but also empowers individuals and communities. For instance, I had the privilege of working on Medikea, a project aimed at improving healthcare accessibility through innovative mobile applications. Additionally, my contributions to Tabibu, which brings healthcare services directly to people's hands, reflect my commitment to using technology to make a tangible impact on society.
+        </p>
+        <p>
+            As a fast learner and a problem-solver, I continually seek to expand my knowledge. Whether it's exploring new tools in artificial intelligence or delving into the latest security protocols, I am always eager to embrace the next challenge. I take great pride in my work and maintain an unwavering commitment to excellence—whether leading teams or working alongside brilliant individuals to deliver innovative solutions.
+        </p>
+        <p>
+            Throughout my career, I have maintained strong relationships with many talented professionals and have been fortunate enough to present a project to the Ministry of Health in Dar es Salaam, demonstrating the value that technology can bring to public service.
+        </p>
+        <p>
+            I sincerely believe in the power of collaboration and the collective potential of brilliant minds coming together to solve complex problems. If you wish to discuss my experiences or explore opportunities for collaboration, I would be honored to hear from you.
+        </p>
+        <h2>With deepest respect and dedication,</h2>
+        <div class="signature">
+            <strong id="github" title="Isaka James' Github" class="clickable">Isaka James</strong>
+        </div>
+        <div class="contact">
+            <p><a href="#" id="contact-link" title="Email Me">Contact Me</a></p>
+        </div>
+        
+    </div>
     <script>
-        // Script to protect the email address and set the "Contact Me" link dynamically
-        document.getElementById('contact-link').addEventListener('click', function(e) {
-            e.preventDefault();  // Prevent default action of the link
-            var email = 'isakajames' + '@' + 'jasitech.co.tz';  // Combine email parts
-            var subject = 'Contact from Portfolio';  // Optional subject for the email
-            var body = 'Hello, I would like to contact you.'; // Optional body text
-            window.location.href = 'mailto:' + email + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body); // Open email client
+        const lens = document.getElementById("lens");
+        const mainDiv = document.querySelector(".container");
+        
+        document.getElementById('contact-link').addEventListener('click', function (e) {
+            e.preventDefault();
+            var email = 'isakajames' + '@' + 'jasitech.co.tz';
+            var subject = 'I would Like to Offer You a xxxx Job';
+            var body = 'Hello, I am xxx yyy from abcd Company, I would like ...';
+            window.location.href = 'mailto:' + email + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
         });
+
+        document.getElementById('github').addEventListener('click', function (e) {
+            e.preventDefault();
+            window.open('https://github.com/isaka-james', '_blank');
+        
+        });
+
+        document.getElementById('resume').addEventListener('click', function (e) {
+            e.preventDefault();
+            window.open('Isaka James\' Resume.pdf', '_blank');
+        
+        });
+
     </script>
 </body>
 </html>
-
